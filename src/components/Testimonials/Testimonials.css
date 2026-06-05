@@ -1,0 +1,88 @@
+.testimonials {
+  padding: var(--spacing-section) 0;
+  text-align: center;
+  position: relative;
+}
+
+.testimonials-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 80px;
+}
+
+.testimonials-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.quote-box {
+  background-color: #F1F8F4; /* Very light green */
+  padding: 60px;
+  border-radius: 30px;
+  max-width: 600px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-main);
+  font-weight: 400;
+}
+
+.quote-icon {
+  position: absolute;
+}
+
+.quote-open {
+  top: 30px;
+  left: 30px;
+}
+
+.quote-close {
+  bottom: 30px;
+  right: 30px;
+}
+
+/* Scattered Avatars */
+.test-avatars {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: calc(100% + 100px);
+  height: calc(100% + 100px);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.t-avatar {
+  position: absolute;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: float 6s ease-in-out infinite;
+}
+
+.t-avatar-1 { width: 80px; height: 80px; top: 0; left: 10%; animation-delay: 0s; }
+.t-avatar-2 { width: 60px; height: 60px; top: 30%; left: 0; animation-delay: 1s; }
+.t-avatar-3 { width: 120px; height: 120px; top: 40%; left: 15%; animation-delay: 2s; }
+.t-avatar-4 { width: 70px; height: 70px; bottom: 20%; left: 5%; animation-delay: 0.5s; }
+
+.t-avatar-5 { width: 90px; height: 90px; top: 0; right: 10%; animation-delay: 1.5s; }
+.t-avatar-6 { width: 60px; height: 60px; top: 20%; right: 20%; animation-delay: 2.5s; }
+.t-avatar-7 { width: 80px; height: 80px; top: 40%; right: 5%; animation-delay: 0.8s; }
+.t-avatar-8 { width: 140px; height: 140px; bottom: 10%; right: 10%; animation-delay: 1.8s; }
+
+@media (max-width: 992px) {
+  .test-avatars {
+    display: none; /* Hide on smaller screens to keep it clean */
+  }
+  .quote-box {
+    padding: 40px;
+  }
+}
